@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Świat Zwierząt - Encyklopedia i Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Świat Zwierząt</a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">
+                ☰
+            </button>
+            
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Start</a></li>
+                    <li><a href="#about" class="nav-link">O stronie</a></li>
+                    <li><a href="#animals" class="nav-link">Gatunki</a></li>
+                    <li><a href="#trivia" class="nav-link">Ciekawostki</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-bg hero-bg-1 active zoom" id="heroBg1"></div>
+            <div class="hero-bg hero-bg-2" id="heroBg2"></div>
+            <div class="container hero-content">
+                <h1>Poznaj świat zwierząt</h1>
+                <p>Dowiedz się więcej o swoich ulubionych gatunkach zwierząt!</p>
+                <div class="hero-buttons">
+                    <a href="#animals" class="btn btn-primary">Przeglądaj gatunki</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section full-screen-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text-wrapper">
+                        <div class="about-text">
+                            <h2>O stronie</h2>
+                            <p>Jesteśmy pasjonatami, którzy stworzyli ten portal z myślą o miłośnikach wszystkich domowych i egzotycznych zwierząt. Dzielimy się rzetelną wiedzą, poradami oraz ciekawostkami na temat psów, kotów, chomików, żółwi, ptaków i wielu innych gatunków. Dołącz do naszej społeczności i dowiedz się, jak lepiej zrozumieć oraz codziennie dbać o swoich czworonożnych i skrzydlatych przyjaciół!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-container" id="sliderContainer">
+                        <img id="sliderImage1" class="slider-img active" src="katyazaych-cat-5088743_1920.jpg" alt="Zdjęcie">
+                        <img id="sliderImage2" class="slider-img" src="" alt="Zdjęcie">
+                        
+                        <button class="slider-btn prev-btn" id="prevBtn">&#10094;</button>
+                        <button class="slider-btn next-btn" id="nextBtn">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="animals" class="animals-section full-screen-section">
+            <div class="container">
+                <h2>Poznaj zwierzęta</h2>
+                <p class="section-desc">Wybierz kategorię, aby zobaczyć wybrane gatunki:</p>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                    <button class="filter-btn" data-filter="dog">Psy</button>
+                    <button class="filter-btn" data-filter="cat">Koty</button>
+                    <button class="filter-btn" data-filter="hamster">Chomiki</button>
+                    <button class="filter-btn" data-filter="turtle">Żółwie</button>
+                    <button class="filter-btn" data-filter="bird">Ptaki</button>
+                </div>
+
+                <div class="animals-grid" id="animalsGrid">
+                    <article class="animal-card" data-category="dog">
+                        <img src="GOLDEN.jpg" alt="Golden Retriever">
+                        <div class="card-body">
+                            <span class="badge">Pies</span>
+                            <h3>Golden Retriever</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Przyjacielski,inteligentny,cierpliwy<br>
+                                <strong>Waga:</strong> Psów: 30-34 kg | Suk: 25-30 kg<br>
+                                <strong>Wzrost:</strong> Psów: 56-61 cm | Suk: 51-56 cm
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="animal-card" data-category="dog">
+                        <img src="owcz.jpg" alt="Owczarek Niemiecki">
+                        <div class="card-body">
+                            <span class="badge">Pies</span>
+                            <h3>Owczarek Niemiecki</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Lojalny, odważny,silny instynkt obronny<br>
+                                <strong>Waga:</strong> Psów: 30-40 kg | Suk: 22-32 kg<br>
+                                <strong>Wzrost:</strong> Psów: 60-65 cm | Suk: 55-60 cm
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="animal-card" data-category="dog">
+                        <img src="beagle.jfif" alt="Beagle">
+                        <div class="card-body">
+                            <span class="badge">Pies</span>
+                            <h3>Beagle</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Wesoły, energiczny, towarzysk<br>
+                                <strong>Waga:</strong> 9-11 kg<br>
+                                <strong>Wzrost:</strong> 33-40 cm
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="animal-card" data-category="cat">
+                        <img src="kotbryt.jfif" alt="Kot Brytyjski Krótkowłosy">
+                        <div class="card-body">
+                            <span class="badge">Kot</span>
+                            <h3>Kot Brytyjski Krótkowłosy</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Spokojny, zrównoważony i niezależny<br>
+                                <strong>Waga:</strong> Kocurów: 5-8 kg | Kotek: 3,5-5,5 kg<br>
+                                <strong>Wzrost:</strong> 30-35 cm
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="animal-card" data-category="cat">
+                        <img src="images.jfif" alt="Maine Coon">
+                        <div class="card-body">
+                            <span class="badge">Kot</span>
+                            <h3>Maine Coon</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Przyjacielski, towarzyski, inteligentny<br>
+                                <strong>Waga:</strong> Kocurów: 6-10 kg | Kotek: 4-6 kg<br>
+                                <strong>Wzrost:</strong> 25-41 cm
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="animal-card" data-category="hamster">
+                        <img src="syry.webp" alt="chomik syryjski">
+                        <div class="card-body">
+                            <span class="badge">Chomik</span>
+                            <h3>Chomik Syryjski</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Samotnik, łagodny,<br>
+                                <strong>Waga:</strong> 100-180 g<br>
+                                <strong>Wzrost:</strong> 15-18 cm
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="animal-card" data-category="hamster">
+                        <img src="nor.jfif" alt="chomik dzungarski">
+                        <div class="card-body">
+                            <span class="badge">Chomik</span>
+                            <h3>Chomik Dżungarski</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Ruchliwy i ciekawy otoczenia<br>
+                                <strong>Waga:</strong> 30-50 g<br>
+                                <strong>Wzrost:</strong> 7-10 cm
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="animal-card" data-category="turtle">
+                        <img src="zolw.jfif" alt="Żółw stepowy">
+                        <div class="card-body">
+                            <span class="badge">Żółw</span>
+                            <h3>Żółw stepowy</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Powolny, spokojny, aktywny za dnia<br>
+                                <strong>Waga:</strong> 0,5-1,5 kg<br>
+                                <strong>Wzrost:</strong> 15-22 cm długości karapaksu
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="animal-card" data-category="bird">
+                        <img src="papuzka.jfif" alt="Papużka falista">
+                        <div class="card-body">
+                            <span class="badge">Ptak</span>
+                            <h3>Papużka falista</h3>
+                            <p class="desc">
+                                <strong>Cechy:</strong> Towarzyska, ciekawska i bardzo głośna<br>
+                                <strong>Waga:</strong> 30-40 g<br>
+                                <strong>Wzrost:</strong> 18-20 cm
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="trivia" class="trivia-section full-screen-section">
+            <div class="container">
+                <h2>Ciekawostki</h2>
+                <div class="help-grid">
+                    <div class="help-card">
+                        <h3>Koci węch i słuch</h3>
+                        <p>Koty słyszą dźwięki o tonacji znacznie wyższej niż te które są słyszalne dla ludzi i psów</p>
+                    </div>
+                    <div class="help-card">
+                        <h3>Pamięć chomików</h3>
+                        <p>Chomiki potrafią zapamiętać układ labiryntu oraz zapach swoich opiekunów na bardzo długo</p>
+                    </div>
+                    <div class="help-card">
+                        <h3>Długowieczność żółwi</h3>
+                        <p>Niektóre gatunki żółwi lądowych potrafią dożyć ponad 80, a nawet 100 lat w sprzyjających warunkach</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Świat Zwierząt. Wszystkie prawa zastrzeżone</p>
+            <p>Kontakt: kontakt@swiatzwierzat.pl | Tel: +48 000 456 789</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
